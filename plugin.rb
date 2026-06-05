@@ -4,7 +4,7 @@
 # about: Manage public short-link redirections within your Discourse forum
 # version: 1.0.0
 # authors: Willy
-# url: https://github.com/your-org/discourse-go-redirects
+# url: https://github.com/curiosport/discourse-go-redirects
 
 enabled_site_setting :go_redirects_enabled
 
