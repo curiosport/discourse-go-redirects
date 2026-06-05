@@ -5,6 +5,7 @@
 # version: 1.0.0
 # authors: Willy
 # url: https://github.com/curiosport/discourse-go-redirects
+# required_version: 2.7.0
 
 enabled_site_setting :go_redirects_enabled
 
