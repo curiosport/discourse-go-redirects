@@ -1,0 +1,1 @@
+# discourse-go-redirects
