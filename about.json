@@ -4,5 +4,5 @@
   "version": "1.0.0",
   "authors": "Willy",
   "url": "https://github.com/your-org/discourse-go-redirects",
-  "required_version": "2.9.0"
+  "required_version": "2026.6.0-latest"
 }
