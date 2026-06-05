@@ -1,0 +1,3 @@
+go_redirects_enabled:
+  default: true
+  client: false

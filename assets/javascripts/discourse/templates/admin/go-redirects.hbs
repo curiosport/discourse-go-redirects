@@ -1,0 +1,58 @@
+<div class="go-redirects-admin">
+  <h2>Go Redirects</h2>
+  <p class="go-redirects-hint">
+    Manage public short-links at <code>/go/&lt;slug&gt;</code>. These redirects
+    work for anonymous visitors even on private forums.
+  </p>
+
+  <div class="go-redirects-form">
+    <Input
+      @value={{this.slug}}
+      placeholder="slug  (e.g. discord)"
+      class="go-redirects-input"
+    />
+    <Input
+      @value={{this.destination}}
+      placeholder="destination URL  (e.g. https://discord.gg/…)"
+      class="go-redirects-input go-redirects-input--wide"
+    />
+    <DButton
+      @action={{this.addRedirect}}
+      @disabled={{not this.canAdd}}
+      @icon="plus"
+      @title="Add redirect"
+      class="btn-primary go-redirects-btn"
+    />
+    <DButton
+      @action={{this.removeRedirect}}
+      @disabled={{not this.canRemove}}
+      @icon="minus"
+      @title="Remove selected redirect"
+      class="btn-danger go-redirects-btn"
+    />
+  </div>
+
+  {{#if this.redirects.length}}
+    <table class="go-redirects-table">
+      <thead>
+        <tr>
+          <th>Slug</th>
+          <th>Destination URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each this.redirects as |r|}}
+          <tr
+            class="go-redirects-row {{if (eq this.selectedId r.id) 'selected'}}"
+            {{on "click" (fn this.selectRow r.id)}}
+          >
+            <td><code>/go/{{r.slug}}</code></td>
+            <td class="go-redirects-dest">{{r.destination}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p class="go-redirects-empty">No redirects configured yet.</p>
+  {{/if}}
+</div>

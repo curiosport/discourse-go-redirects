@@ -1,0 +1,8 @@
+{
+  "name": "discourse-go-redirects",
+  "about": "Manage public short-link redirections within your Discourse forum",
+  "version": "1.0.0",
+  "authors": "Willy",
+  "url": "https://github.com/your-org/discourse-go-redirects",
+  "required_version": "2.9.0"
+}
